@@ -1,0 +1,50 @@
+<br>
+<br>
+<div class="container">
+  <ng-container *ngIf="user">
+    <div class="form-group row">
+      <label for="Name" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" disabled id="Name" value="{{user.name}}">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Date of Birth</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" disabled id="inputPassword3" value="{{user.dob}}">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="Email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" disabled id="Email" value="{{user.email}}">
+      </div>
+    </div>
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+        <div class="col-sm-10">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="GenderM" type="radio" name="gridRadios" [(ngModel)]="user.gender" [value]="!gender " disabled>
+            <label class="form-check-label" for="GenderM">
+              Male
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="GenderF" type="radio" name="gridRadios" [(ngModel)]="user.gender" [value]="gender" disabled>
+            <label class="form-check-label" for="GenderF">
+              Female
+            </label>
+          </div>
+        
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Budget" class="col-sm-2 col-form-label">Budget</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="Budget" disabled value="{{user.budget}}">
+        </div>
+      </div>
+    </fieldset>
+  </ng-container>
+</div>

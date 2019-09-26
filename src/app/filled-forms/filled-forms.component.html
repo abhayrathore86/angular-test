@@ -1,0 +1,10 @@
+<br>
+<br>
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item disabled" aria-disabled="true">List of all Filled Forms</li>
+    <li (click)="router.navigate(['/cf', user.id]);" class="list-group-item" *ngFor="let user of allUsers">{{user.name}}</li>
+   
+  </ul>
+</div>
+
